@@ -4,7 +4,7 @@ from flask import Blueprint, flash, g, redirect, render_template, request, sessi
 from werkzeug.security import check_password_hash, generate_password_hash
 from flaskr.db import get_db
 
-bp =Blueprint("auth", __name__, url_prefix="/auth") # create blueprint; __name__ : to tell where it is defined
+bp = Blueprint("auth", __name__, url_prefix="/auth") # create blueprint; __name__ : to tell where it is defined
 
 @bp.route("/register", methods=("Get", "POST"))
 def register():
@@ -31,6 +31,8 @@ def register():
                 return redirect(url_for("auth.login"))
 
         flash(error)
+        
+        
         
     return render_template("auth/register.html")
 

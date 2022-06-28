@@ -4,5 +4,8 @@
 - assign env var FLASK_APP before run project
 
 ```
-$ export FLASK_APP=hello
+$ export FLASK_APP=
+$ export FLASK_ENV=development
 ```
+
+- further study needed for "test coverage" in official docs
